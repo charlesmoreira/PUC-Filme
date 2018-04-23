@@ -1,0 +1,246 @@
+.container {
+	position: relative;
+	margin: 0 30px 50px;
+}
+
+.colunaEsquerda, .colunaDireita {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+
+header {
+	overflow: auto;
+}
+
+body {
+    background-color: #1e1f26;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+figure {
+	margin: 0;
+}
+
+.topo {
+	background-image: url(../img/screenshot-8.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: auto;
+	position: relative;
+}
+
+	.topo::before {
+		background-image: linear-gradient(rgba(30,31,38,0) -20%,#1e1f26 96%);
+	    position: absolute;
+	    content: "";
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.logotipo {
+		margin-bottom: 0.3em;
+	    font-size: 3.75em;
+	    text-shadow: 0.05em 0.05em 0.1em #222;
+	}
+
+.cabecalho .cabecalhoTitulo {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0.6em 0 0 0;
+	padding: 0 1em 0.2em 0;
+	display: inline-block;
+	border-bottom: 3px solid #fddc00;
+}
+
+.tagList {
+	background-color: #1e1f26;
+	padding: 0.3em 0.5em;
+	list-style: none;
+	display: inline-block;
+	border-radius: 5px;
+	margin-top: 0;
+}
+
+	.tagItem {
+		font-size: 0.75em;
+		color: #c5c5c5;
+		display: inline-block;
+		padding: 0 1em;
+		border-right:1px solid #c5c5c5;
+	}
+
+	.tagItem:last-child {
+		border-right: none;
+	}
+
+.avaliacao {
+	font-size: 0.75em;
+}
+
+	.avaliacaoNota {
+		font-size: 1.5em;
+		display: inline-block;
+		background-color: #1e1f26;
+		padding: 0.5em 0.5em 0.4em 0.5em;
+		margin-bottom: 0.5em;
+		border-radius: 5px;
+	}
+
+.principal {
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+
+.poster {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.sinopse {
+	font-size: 1em;
+	font-weight: 300;
+}
+
+	.embededVideo {
+		border: none; /*o atributo frameborder do elemento iframe não é suportado pelo html5 */
+		width: 100%;
+		height: 300px;
+		box-shadow: 0 0 10px #000;
+	}
+
+
+dt {
+	color: #8b8b8b;
+}
+
+dt:after {
+	content: ": ";
+}
+
+dt + dd:after{
+	content: "\A";
+	white-space: pre;
+}
+
+dt, dd {
+	font-size: 0.87em;
+	display: inline;
+	margin-left: 0px;
+}
+
+dt[class="elenco"] {
+	display: block;
+	padding-top: 1em;
+}
+
+dt[class="elenco"] ~ dd::after {
+	content: ", ";
+}
+
+dt[class="elenco"] ~ dd:last-child::after {
+	content: " ";
+}
+
+
+.screenshotsContainer {
+	background-color: #000;
+	position: relative;
+}
+
+	.screenshotsContainer::before {
+		background-image: linear-gradient(0deg, #09090C 20%, rgba(0,0,0,0) 96%);
+	    position: absolute;
+	    content: "";
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.screenshots ul, .screenshots > figure {
+		padding: 0;
+		margin: 10px 0;
+	}
+
+	.screenshots ul li {
+	    display: inline;
+	}
+
+	.screenshots li img {
+	    height: 50px;
+		padding: 2px;
+	}
+
+	.screenshots > figure img {
+		width: 100%;
+	}
+
+	li img.thumb-active, li.thumbnail img:hover {
+		border: 2px solid deepskyblue;
+		padding: 0;
+	}
+
+
+
+/* ========================== Media Queries =============================== */
+
+@media all and (min-width: 750px) {
+
+	.container {
+		width: 700px;
+		margin: 0 auto 50px;
+	}
+
+	.colunaEsquerda {
+		width: 30%;
+		margin: 0 2%;
+	}
+
+	.colunaDireita {
+		width: 60%;
+		margin: 0 2%;
+	}
+
+	.poster {
+		width: 100%;
+		margin: 0;
+	}
+
+}
+
+@media all and (min-width: 992px) {
+	.container {
+		width: 900px;
+		margin: 0 auto 50px;
+	}
+
+	.logotipo {
+		margin-top: 1em;
+	}
+
+	.avaliacao {
+		width: 110px;
+		text-align: center;
+		margin-right: 20px;
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+	}
+
+	.tagList {
+		float: left;
+	}
+}
